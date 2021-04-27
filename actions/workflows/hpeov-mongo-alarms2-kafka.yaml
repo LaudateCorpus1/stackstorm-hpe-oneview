@@ -1,0 +1,22 @@
+version: 1.0 
+
+description: A workflow to copy hpe OneView alarms from mongo and into a kafka topic.
+
+tasks:
+  getalerts:
+    action: hpeoneview.get_mongo_alarms-kafka
+    next:
+      - when: <% succeeded() %>
+        publish:
+          - alarms: <% result().result %>
+        do: alertskafka
+
+  alertskafka:
+    with: <% ctx().alarms %>
+    action: kafka.produce topic=hpeov-alarms message='<% item() %>'
+    next:
+      - when: <% succeeded() %>
+        do: processalarmskafka
+
+  processalarmskafka:
+    action: hpeoneview.process_alarms_kafka alarms=<% ctx().alarms %>

@@ -1,0 +1,38 @@
+---
+name: post_vlan
+pack: hpeoneview
+description: Post a vlan to the oneview appliance
+runner_type: python-script
+entry_point: post_vlan.py
+enabled: true
+parameters:
+  vlanId:
+    type: "integer"
+    description: "The vlan set"
+    required: true
+    position: 0
+  name:
+    type: "string"
+    description: "The vlan group name"
+    required: true
+    position: 1
+  purpose:
+    type: "string"
+    description: "The vlan group purpose"
+    required: true
+    position: 2
+  smartLink:
+    type: "boolean"
+    description: "Smartlink enabled?"
+    required: true
+    position: 3
+  privateNetwork:
+    type: "boolean"
+    description: "privateNetwork?"
+    required: true
+    position: 4
+  ethernetNetworkType:
+    type: "string"
+    description: "Tagged or Untagged"
+    required: true
+    position: 5

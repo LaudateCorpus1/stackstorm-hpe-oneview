@@ -1,0 +1,11 @@
+---
+name: process_alarms_kafka
+pack: hpeoneview
+description: Set the process flag in the mongo database for alarms to yes for kafka alarms
+runner_type: python-script
+entry_point: process_alarms_kafka.py
+enabled: true
+parameters:
+  alarms:
+    required: true
+    type: array

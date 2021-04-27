@@ -1,0 +1,15 @@
+version: 1.0
+
+description: A workflow to copy hpe OneView server hardware into a mongo database.
+
+tasks:
+  getservers:
+    action: hpeoneview.get_server_hardware
+    next:
+      - when: <% succeeded() %>
+        publish:
+          - servers: <% result().result %>
+        do: sendmongo
+
+  sendmongo:
+    action: hpeoneview.load-hpeov-server-hardware servers=<% ctx().servers %>

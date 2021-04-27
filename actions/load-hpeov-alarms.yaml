@@ -1,0 +1,11 @@
+---
+name: load-hpeov-alarms
+pack: hpeoneview
+description: build mongo db of real time alarms on OneView
+runner_type: python-script
+entry_point: load-hpeov-alarms.py
+enabled: true
+parameters:
+  alarms:
+    required: true
+    type: array

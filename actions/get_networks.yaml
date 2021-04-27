@@ -1,0 +1,7 @@
+---
+name: get_networks
+pack: hpeoneview
+description: Get an array of networks from the oneview appliance
+runner_type: python-script
+entry_point: get_networks.py
+enabled: true

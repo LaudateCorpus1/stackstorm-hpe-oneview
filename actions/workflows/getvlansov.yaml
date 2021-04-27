@@ -1,0 +1,24 @@
+version: 1.0
+
+description: A workflow to get oneview networks and program vlans the hpecfm controller.
+
+tasks:
+  getvlans:
+    action: hpeoneview.get_networks
+    next:
+      - when: <% succeeded() %>
+        publish:
+          - networks: <% result().result %>
+        do: cleanvlans
+
+  cleanvlans:
+    action: hpeoneview.format_vlans networks=<% ctx().networks %>
+    next:
+      - when: <% succeeded() %>
+        publish:
+          - networks1: <% result().result %>
+        do: sendcfm
+
+  sendcfm:
+    with: <% ctx().networks1 %>
+    action: hpecfm.post_vlan name='<% item(name) %>' description='<% item(description) %>' vlans='<% item(vlans) %>'

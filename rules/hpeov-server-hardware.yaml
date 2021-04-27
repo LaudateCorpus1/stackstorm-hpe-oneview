@@ -1,0 +1,13 @@
+---
+name: "hpeov-server-hardware"
+description: "Get HPE OneView server hardware."
+enabled: false
+
+trigger:
+  type: "core.st2.IntervalTimer"
+  parameters:
+    delta: 5
+    unit: minutes
+
+action:
+  ref: "hpeoneview.get-hpeov-server-hardware"

@@ -1,0 +1,15 @@
+---
+ipaddress:
+  description: "IP address of the OneView instance (e.g.: 'fqdn.to.device' or '10.10.10.10')"
+  type: "string"
+  secret: false
+  required: true
+username:
+  description: "Username for OneView"
+  type: "string"
+  required: true
+password:
+  description: "Password for OneView"
+  type: "string"
+  secret: true
+  required: true

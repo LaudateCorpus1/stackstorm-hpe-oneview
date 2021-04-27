@@ -1,0 +1,11 @@
+---
+name: load-hpeov-mongo-kafka
+pack: hpeoneview
+description: load a mongo tracking database with alarms to be processed to kafka
+runner_type: python-script
+entry_point: load-hpeov-mongo-kafka.py
+enabled: true
+parameters:
+  alarms:
+    required: true
+    type: array

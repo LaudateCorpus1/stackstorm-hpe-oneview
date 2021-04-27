@@ -1,0 +1,6 @@
+---
+name: hpeov-mongo-alarms2-kafka
+description: A workflow for sending oneview alerts from mongo to kafka topic.
+runner_type: orquesta
+entry_point: workflows/hpeov-mongo-alarms2-kafka.yaml
+enabled: true

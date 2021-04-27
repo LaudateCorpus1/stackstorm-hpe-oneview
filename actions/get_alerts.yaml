@@ -1,0 +1,7 @@
+---
+name: get_alerts
+pack: hpeoneview
+description: Get an array of alerts from the oneview appliance
+runner_type: python-script
+entry_point: get_alerts.py
+enabled: true

@@ -1,0 +1,6 @@
+---
+name: get-hpeov-alarms-mongo-kafka
+description: A workflow for getting hpe OneView alarms into a kafka topic
+runner_type: orquesta
+entry_point: workflows/get-hpeov-alarms-mongo-kafka.yaml
+enabled: true

@@ -1,0 +1,11 @@
+---
+name: process_alarms
+pack: hpeoneview
+description: Set the process flag in the mongo database for alarms to yes
+runner_type: python-script
+entry_point: process_alarms.py
+enabled: true
+parameters:
+  alarms:
+    required: true
+    type: array

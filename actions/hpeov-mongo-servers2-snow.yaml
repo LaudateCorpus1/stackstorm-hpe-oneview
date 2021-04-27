@@ -1,0 +1,6 @@
+---
+name: hpeov-mongo-servers2-snow
+description: A workflow for sending oneview servers from mongo to servicenow.
+runner_type: orquesta
+entry_point: workflows/hpeov-mongo-servers2-snow.yaml
+enabled: true

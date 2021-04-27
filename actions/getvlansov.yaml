@@ -1,0 +1,6 @@
+---
+name: getvlansov
+description: A workflow for getting vlans from oneview.
+runner_type: orquesta
+entry_point: workflows/getvlansov.yaml
+enabled: true

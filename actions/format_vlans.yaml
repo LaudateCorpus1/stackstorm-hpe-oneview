@@ -1,0 +1,10 @@
+---
+name: format_vlans
+pack: hpeoneview
+description: process dictionary into actionable items
+runner_type: python-script
+entry_point: format_vlans.py
+enabled: true
+parameters:
+  networks:
+    type: "array"

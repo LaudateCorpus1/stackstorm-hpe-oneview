@@ -1,0 +1,10 @@
+---
+name: sendsnow
+description: A workflow for sending oneview alerts to servicenow.
+runner_type: orquesta
+entry_point: workflows/sendsnow.yaml
+enabled: true
+parameters:
+  alerts:
+    required: true
+    type: array

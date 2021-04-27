@@ -1,0 +1,13 @@
+---
+ref: hpeoneview
+name: hpeoneview
+description: HPE OneView Integration Pack
+keywords:
+  - HPE OneView
+  - Virtual Connect
+version: 0.1.0
+python_versions:
+  - "2"
+  - "3"
+author: Rick Kauffman
+email: rick.a.kauffman@hpe.com

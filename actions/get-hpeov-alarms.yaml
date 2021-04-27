@@ -1,0 +1,7 @@
+---
+name: get-hpeov-alarms
+description: A workflow for getting hpe OneView alarms into a mongo database.
+runner_type: orquesta
+entry_point: workflows/get-hpeov-alarms.yaml
+enabled: true
+ 

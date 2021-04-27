@@ -1,0 +1,13 @@
+---
+name: "hpeov-alarms2-kafka-rule"
+description: "Get HPE OneView alarms and send to kafka topic."
+enabled: false
+
+trigger:
+  type: "core.st2.IntervalTimer"
+  parameters:
+    delta: 5
+    unit: minutes
+
+action:
+  ref: "hpeoneview.hpeov-mongo-alarms2-kafka"

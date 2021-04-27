@@ -1,0 +1,7 @@
+---
+name: get_server_hardware
+pack: hpeoneview
+description: Get an array of alerts from the oneview appliance
+runner_type: python-script
+entry_point: get_server_hardware.py
+enabled: true

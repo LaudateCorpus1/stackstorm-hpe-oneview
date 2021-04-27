@@ -1,0 +1,15 @@
+version: 1.0
+
+description: A workflow to copy hpe OneView alarms into a mongo database.
+
+tasks:
+  getalarms:
+    action: hpeoneview.get_alerts
+    next:
+      - when: <% succeeded() %>
+        publish:
+          - alarms: <% result().result %>
+        do: sendmongokafka
+
+  sendmongokafka:
+    action: hpeoneview.load-hpeov-mongo-kafka alarms=<% ctx().alarms %>

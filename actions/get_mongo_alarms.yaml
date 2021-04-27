@@ -1,0 +1,7 @@
+---
+name: get_mongo_alarms
+pack: hpeoneview
+description: Get an non-processed alarm entries from mongo database
+runner_type: python-script
+entry_point: get_mongo_alarms.py
+enabled: true

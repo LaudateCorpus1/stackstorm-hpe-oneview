@@ -1,0 +1,11 @@
+---
+name: load-hpeov-server-hardware
+pack: hpeoneview
+description: build mongo db of server hardware from OneView
+runner_type: python-script
+entry_point: load-hpeov-server-hardware.py
+enabled: true
+parameters:
+  servers:
+    required: true
+    type: array

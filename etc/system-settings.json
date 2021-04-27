@@ -1,0 +1,25 @@
+{
+  "ip": "172.16.102.59",
+  "image_streamer_ip": "172.16.102.60",
+  "api_version": 500,
+  "ssl_certificate": "",
+  "credentials": {
+    "userName": "administrator",
+    "authLoginDomain": "",
+    "password": "",
+    "sessionID": ""
+  },
+  "enclosure_hostname": "172.18.1.13",
+  "enclosure_username": "",
+  "enclosure_password": "",
+  "enclosure_group_uri": "",
+  "server_hostname": "",
+  "server_username": "",
+  "server_password": "",
+  "storage_system_hostname": "",
+  "storage_system_username": "",
+  "storage_system_password": "",
+  "power_device_hostname": "",
+  "power_device_username": "",
+  "power_device_password": ""
+}

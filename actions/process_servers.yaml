@@ -1,0 +1,11 @@
+---
+name: process_servers
+pack: hpeoneview
+description: Set the process flag in the mongo database for servers to yes
+runner_type: python-script
+entry_point: process_servers.py
+enabled: true
+parameters:
+  servers:
+    required: true
+    type: array

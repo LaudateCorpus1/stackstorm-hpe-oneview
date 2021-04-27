@@ -1,0 +1,12 @@
+version: 1.0
+
+description: "Send hpeoneview alerts to snow"
+
+input:
+  - alerts
+
+tasks:
+
+    snowalertss:
+      with: <% ctx().alerts %>
+      action: servicenow.create_record table="u_cfm_alert" payload='<% item() %>'

@@ -1,0 +1,6 @@
+---
+name: get-hpeov-server-hardware
+description: A workflow for getting hpe OneView server hardware.
+runner_type: orquesta
+entry_point: workflows/get-hpeov-server-hardware.yaml
+enabled: true
