@@ -42,7 +42,7 @@ Actions are defined in two groups:
 ### Individual actions: GET, POST, PUT with under bar will precede each individual action
 * ``get_interconnects``
 * ``get_network_sets``
-* ``get_`enclosure``
+* ``get_enclosure``
 * ``post_fabrics``
 
 ### Orquestra Workflows: will not
